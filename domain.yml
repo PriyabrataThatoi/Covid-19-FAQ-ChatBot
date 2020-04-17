@@ -1,0 +1,102 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- corona_intro
+- corona_spread
+- corona_food_fact
+- corona_social_distancing
+- corona_sick_and_isolation
+- corona_protect
+- corona_warm_weather
+- corona_high_risk
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Stay safe and isolate !
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_corona_intro:
+  - text: "• Coronavirus (COVID-19) is an illness caused by a virus that can spread\
+      \ from person to person. • The virus that causes COVID-19 is a new Coronavirus\
+      \ that has spread throughout the world. • COVID-19 symptoms can range from mild\
+      \ (or no symptoms) to severe illness.\nSOURCE : CDC"
+    click to know more: https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf
+  utter_corona_spread:
+  - text: "• You can become infected by coming into close contact (about 6 feet or\
+      \ two arm lengths) with a person who has COVID-19. COVID-19 is primarily spread\
+      \ from person to person. • You can become infected from respiratory droplets\
+      \ when an infected person coughs, sneezes, or talks. • You may also be able\
+      \ to get it by touching a surface or object that has the virus on it, and then\
+      \ by touching your mouth, nose, or eyes.\nSOURCE : CDC"
+    click to know more: https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf
+  utter_corona_food_fact:
+  - text: " Coronaviruses are generally thought to be spread from person-to-person\
+      \ through respiratory droplets. Currently there is no evidence to support transmission\
+      \ of COVID-19 associated with food. Before preparing or eating food, it is important\
+      \ to always wash your hands with soap and water for 20 seconds for general food\
+      \ safety\nSOURCE : CDC"
+    click to know more: https://www.cdc.gov/foodsafety/newsletter/food-safety-and-Coronavirus.html
+  utter_corona_social_distancing:
+  - text: "• Buy groceries and medicine, go to the doctor, and complete banking activities\
+      \ online when possible. • If you must go in person, stay at least 6 feet away\
+      \ from others and disinfect items you must touch. • Get deliveries and takeout,\
+      \ and limit in-person contact as much as possible.\nSOURCE : CDC"
+    click to know more: https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf
+  utter_corona_sick_and_isolation:
+  - text: "• Stay home if you are sick, except to get medical care. • Avoid public\
+      \ transportation, ride-sharing, or taxis. • Separate yourself from other people\
+      \ and pets in your home. • There is no specific treatment for COVID-19, but\
+      \ you can seek medical care to help relieve your symptoms. • If you need medical\
+      \ attention, call ahead.\nSOURCE : CDC"
+    click to know more: https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf
+  utter_corona_protect:
+  - text: "• There is currently no vaccine to protect against COVID-19. The best way\
+      \ to protect yourself is to avoid being exposed to the virus that causes COVID-19.\
+      \ • Stay home as much as possible and avoid close contact with others. • Wear\
+      \ a cloth face covering that covers your nose and mouth in public settings.\
+      \ • Clean and disinfect frequently touched surfaces. • Wash your hands often\
+      \ with soap and water for at least 20 seconds, or use an alcoholbased hand sanitizer\
+      \ that contains at least 60% alcohol.\nSOURCE: CDC"
+    click to know more: https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf
+  utter_corona_warm_weather:
+  - text: As per the leading experts on infectious diseases, it is uncertain. Here
+      is an abstract from the interview with Dr.Anthony Fauci -  there's a precedent
+      with other infections like influenza that when the virus gets warmer that the
+      virus goes down in its ability to replicate, to spread . having said that, one
+      should not assume that we are going to be rescued by a change in the weather.
+      You must assume that the virus will continue to do its thing. If we get some
+      help from the weather, so be it, fine. But I don't think we need to assume that.
+  utter_corona_high_risk:
+  - text: "COVID-19 is a new disease and there is limited information regarding risk\
+      \ factors for severe disease. Based on currently available information and clinical\
+      \ expertise, older adults and people of any age who have serious underlying\
+      \ medical conditions might be at higher risk for severe illness from COVID-19.\n\
+      SOURCE: CDC"
+    click to know more: https://www.cdc.gov/coronavirus/2019-ncov/faq.html
+actions:
+- utter_great
+- utter_cheer_up
+- utter_did_that_help
+- utter_goodbye
+- utter_iamabot
+- utter_corona_intro
+- utter_corona_spread
+- utter_corona_food_fact
+- utter_corona_social_distancing
+- utter_corona_sick_and_isolation
+- utter_corona_protect
+- utter_corona_warm_weather
+- utter_corona_high_risk
+- utter_greet
