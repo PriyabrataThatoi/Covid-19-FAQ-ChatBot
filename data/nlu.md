@@ -5,6 +5,8 @@
 - good morning
 - good evening
 - hey there
+- Hey
+- How you doing?
 
 ## intent:goodbye
 - bye
@@ -178,6 +180,41 @@
 - nursing home
 - nursing homes
 
+
+## intent:out_of_scope
+- please help with my ice cream it's dripping
+- no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
+- i want a non dripping ice cream
+- someone call the police i think the bot died
+- show me a picture of a chicken
+- neither
+- I want french cuisine
+- i am hungry
+- restaurant
+- can i be shown a gluten free restaurant
+- i don't care!!!!
+- i do not care how are you
+- again?
+- oh wait i gave you my work email address can i change it?
+- hang on let me find it
+- stop it, i do not care!!!
+- how come?
+- I changed my mind
+- what?
+- did i break you
+- that link doesn't work!
+- you already have that
+- this is a really frustrating experience
+- no stop
+- give me food
+- i want food
+- Can I ask you questions first?
+- is it a wasteland full of broken robot parts?
+- can we keep chatting?
+- talk to me
+- who is your favourite robot?
+- can you help me to build a bot
+
 ## intent:inform_location
 - [Sitka](location)
 - [Juneau](location)
@@ -261,44 +298,3 @@
 - [El Paso](location)
 - [Kansas location](location)
 - [San Francisco](location)
-- [Santa Barbara](location)
-- [home health agency](facility_type)
-- [hospital](facility_type)
-- [nursing home](facility_type)
-- a [home health agency](facility_type)
-- a [hospital](facility_type)
-- a [nursing home](facility_type)
-
-## intent:out_of_scope
-- please help with my ice cream it's dripping
-- no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
-- i want a non dripping ice cream
-- someone call the police i think the bot died
-- show me a picture of a chicken
-- neither
-- I want french cuisine
-- i am hungry
-- restaurant
-- can i be shown a gluten free restaurant
-- i don't care!!!!
-- i do not care how are you
-- again?
-- oh wait i gave you my work email address can i change it?
-- hang on let me find it
-- stop it, i do not care!!!
-- how come?
-- I changed my mind
-- what?
-- did i break you
-- that link doesn't work!
-- you already have that
-- this is a really frustrating experience
-- no stop
-- give me food
-- i want food
-- Can I ask you questions first?
-- is it a wasteland full of broken robot parts?
-- can we keep chatting?
-- talk to me
-- who is your favourite robot?
-- can you help me to build a bot

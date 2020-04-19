@@ -31,53 +31,59 @@ slots:
     type: unfeaturized
 responses:
   utter_greet:
-  - text: Hey! How are you?
-  - text: How can I help you?
-  utter_did_that_help:
-  - text: Did that help you?
-  - text: I am sure it did :)
-  utter_goodbye:
-  - text: Good bye. Stay safe and isolate !
+  - text: Hi. What are you looking for?
+  - text: Hello! What can I help you find today?
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: Yes I am a RASA powered bot. How can I help you today?
+  utter_goodbye:
+  - text: Talk to you later!
+  - text: Have a good day.
+  - text: Until next time!
+  utter_noworries:
+  - text: My pleasure.
+  - text: You are welcome!
+  utter_ask_location:
+  - text: Please provide your city name.
+  - text: What is your current city?
+  - text: Please provide your city name or zip code.
+  - text: Please enter your zip code or city name to find local providers.
   utter_corona_intro:
-  - text: "• Coronavirus (COVID-19) is an illness caused by a virus that can spread\
+  - text: • Coronavirus (COVID-19) is an illness caused by a virus that can spread\
       \ from person to person. • The virus that causes COVID-19 is a new Coronavirus\
       \ that has spread throughout the world. • COVID-19 symptoms can range from mild\
-      \ (or no symptoms) to severe illness.\n SOURCE : CDC click to know more: https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf"
+      \ (or no symptoms) to severe illness.\n. SOURCE - https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf
   utter_corona_spread:
-  - text: "• You can become infected by coming into close contact (about 6 feet or\
-      \ two arm lengths) with a person who has COVID-19. COVID-19 is primarily spread\
-      \ from person to person. • You can become infected from respiratory droplets\
-      \ when an infected person coughs, sneezes, or talks. • You may also be able\
-      \ to get it by touching a surface or object that has the virus on it, and then\
-      \ by touching your mouth, nose, or eyes.\nSOURCE : CDC click to know more: https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf"
+  - text: • You can become infected by coming into close contact (about 6 feet or
+      two arm lengths) with a person who has COVID-19. COVID-19 is primarily spread
+      from person to person. • You can become infected from respiratory droplets when
+      an infected person coughs, sneezes, or talks. • You may also be able to get
+      it by touching a surface or object that has the virus on it, and then by touching
+      your mouth, nose, or eyes. SOURCE - https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf
   utter_corona_food_fact:
-  - text: " Coronaviruses are generally thought to be spread from person-to-person\
-      \ through respiratory droplets. Currently there is no evidence to support transmission\
-      \ of COVID-19 associated with food. Before preparing or eating food, it is important\
-      \ to always wash your hands with soap and water for 20 seconds for general food\
-      \ safety\nSOURCE : CDC click to know more: https://www.cdc.gov/foodsafety/newsletter/food-safety-and-Coronavirus.html"
+  - text: Coronaviruses are generally thought to be spread from person-to-person through
+      respiratory droplets. Currently there is no evidence to support transmission
+      of COVID-19 associated with food. Before preparing or eating food, it is important
+      to always wash your hands with soap and water for 20 seconds for general food
+      safety. SOURCE - https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf
   utter_corona_social_distancing:
-  - text: "• Buy groceries and medicine, go to the doctor, and complete banking activities\
+  - text: • Buy groceries and medicine, go to the doctor, and complete banking activities\
       \ online when possible. • If you must go in person, stay at least 6 feet away\
       \ from others and disinfect items you must touch. • Get deliveries and takeout,\
-      \ and limit in-person contact as much as possible.\nSOURCE : CDC click to know\
-      \ more: https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf"
+      \ and limit in-person contact as much as possible.\n". SOURCE - https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf
   utter_corona_sick_and_isolation:
-  - text: "• Stay home if you are sick, except to get medical care. • Avoid public\
-      \ transportation, ride-sharing, or taxis. • Separate yourself from other people\
-      \ and pets in your home. • There is no specific treatment for COVID-19, but\
-      \ you can seek medical care to help relieve your symptoms. • If you need medical\
-      \ attention, call ahead.\nSOURCE : CDC click to know more: https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf"
+  - text: • Stay home if you are sick, except to get medical care. • Avoid public
+      transportation, ride-sharing, or taxis. • Separate yourself from other people
+      and pets in your home. • There is no specific treatment for COVID-19, but you
+      can seek medical care to help relieve your symptoms. • If you need medical attention,
+      call ahead. SOURCE - https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf
   utter_corona_protect:
-  - text: "• There is currently no vaccine to protect against COVID-19. The best way\
-      \ to protect yourself is to avoid being exposed to the virus that causes COVID-19.\
-      \ • Stay home as much as possible and avoid close contact with others. • Wear\
-      \ a cloth face covering that covers your nose and mouth in public settings.\
-      \ • Clean and disinfect frequently touched surfaces. • Wash your hands often\
-      \ with soap and water for at least 20 seconds, or use an alcoholbased hand sanitizer\
-      \ that contains at least 60% alcohol.\nSOURCE: CDC click to know more: https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf"
+  - text: • There is currently no vaccine to protect against COVID-19. The best way
+      to protect yourself is to avoid being exposed to the virus that causes COVID-19.
+      • Stay home as much as possible and avoid close contact with others. • Wear
+      a cloth face covering that covers your nose and mouth in public settings. •
+      Clean and disinfect frequently touched surfaces. • Wash your hands often with
+      soap and water for at least 20 seconds, or use an alcoholbased hand sanitizer
+      that contains at least 60% alcohol. SOURCE - https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf
   utter_corona_warm_weather:
   - text: As per the leading experts on infectious diseases, it is uncertain. Here
       is an abstract from the interview with Dr.Anthony Fauci -  there's a precedent
@@ -87,14 +93,11 @@ responses:
       You must assume that the virus will continue to do its thing. If we get some
       help from the weather, so be it, fine. But I don't think we need to assume that.
   utter_corona_high_risk:
-  - text: "COVID-19 is a new disease and there is limited information regarding risk\
-      \ factors for severe disease. Based on currently available information and clinical\
-      \ expertise, older adults and people of any age who have serious underlying\
-      \ medical conditions might be at higher risk for severe illness from COVID-19.\n\
-      SOURCE: CDC click to know more: https://www.cdc.gov/coronavirus/2019-ncov/faq.html"
-  utter_noworries:
-  - text: My pleasure.
-  - text: You are welcome!
+  - text: COVID-19 is a new disease and there is limited information regarding risk
+      factors for severe disease. Based on currently available information and clinical
+      expertise, older adults and people of any age who have serious underlying medical
+      conditions might be at higher risk for severe illness from COVID-19. SOURCE
+      - https://www.cdc.gov/coronavirus/2019-ncov/downloads/2019-ncov-factsheet.pdf
 actions:
 - utter_great
 - utter_cheer_up
@@ -111,5 +114,7 @@ actions:
 - utter_corona_high_risk
 - utter_greet
 - utter_noworries
+- utter_ask_facility_type
+- utter_ask_location
 forms:
 - facility_form
