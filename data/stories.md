@@ -41,3 +41,25 @@
 ## corona high risk path
 * corona_high_risk
   - utter_corona_high_risk
+  
+## search testing center with location path
+* greet
+  - utter_greet
+* search_provider{"facility_type":"hospital","location":"San Francisco"}
+  - facility_form
+  - form{"name":"facility_form"}
+  - form{"name":null}
+* thanks
+  - utter_noworries
+  
+## search testing center without location path
+* greet
+  - utter_greet
+* search_provider{"facility_type":"hospital"}
+  - facility_form
+  - form{"name":"facility_form"}
+  - form{"name":null}
+* thanks
+  - utter_noworries
+  
+   
