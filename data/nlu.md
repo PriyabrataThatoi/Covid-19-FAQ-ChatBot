@@ -59,12 +59,14 @@
 - How does corona spread?
 - how does the virus spread?
 - how does the covid19 spread?
+- how does it spread?
 
 ##intent:corona_food_fact
 - Does corona spread through spread?
 - How will corona spread through food?
 - corona spreads through food we eat?
-
+- Does it spread through food?
+- does it spread through food?
 ##intent:corona_social_distancing
 - how does social distancing stops spreading?
 - does social distancing helps?

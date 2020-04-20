@@ -75,7 +75,7 @@ def _find_facilities(location: Text, resource: Text) -> List[Dict]:
         full_path = _create_path(ENDPOINTS["base"], resource,
                                  ENDPOINTS[resource]["city_query"],
                                  location.upper())
-    print("Full path:")
+    #print("Full path:")
     #print(full_path)
     results = requests.get(full_path).json()
     return results
@@ -88,7 +88,82 @@ def _resolve_name(facility_types, resource) ->Text:
     return ""
 
 
+class FindFacilityTypes(Action):
+    """This action class allows to display buttons for each facility type
+    for the user to chose from to fill the facility_type entity slot."""
 
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+
+        return "find_facility_types"
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List:
+
+        buttons = []
+        for t in FACILITY_TYPES:
+            facility_type = FACILITY_TYPES[t]
+            payload = "/inform{\"facility_type\": \"" + facility_type.get(
+                "resource") + "\"}"
+
+            buttons.append(
+                {"title": "{}".format(facility_type.get("name").title()),
+                 "payload": payload})
+
+        # TODO: update rasa core version for configurable `button_type`
+        dispatcher.utter_button_template("utter_greet", buttons, tracker)
+        return []
+
+
+class FindHealthCareAddress(Action):
+    """This action class retrieves the address of the user's
+    healthcare facility choice to display it to the user."""
+
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+
+        return "find_healthcare_address"
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict]:
+
+        facility_type = tracker.get_slot("facility_type")
+        healthcare_id = tracker.get_slot("facility_id")
+        full_path = _create_path(ENDPOINTS["base"], facility_type,
+                                 ENDPOINTS[facility_type]["id_query"],
+                                 healthcare_id)
+        results = requests.get(full_path).json()
+        if results:
+            selected = results[0]
+            if facility_type == FACILITY_TYPES["hospital"]["resource"]:
+                address = "{}, {}, {} {}".format(selected["address"].title(),
+                                                 selected["city"].title(),
+                                                 selected["state"].upper(),
+                                                 selected["zip_code"].title())
+            elif facility_type == FACILITY_TYPES["nursing_home"]["resource"]:
+                address = "{}, {}, {} {}".format(selected["provider_address"].title(),
+                                                 selected["provider_city"].title(),
+                                                 selected["provider_state"].upper(),
+                                                 selected["provider_zip_code"].title())
+            else:
+                address = "{}, {}, {} {}".format(selected["address"].title(),
+                                                 selected["city"].title(),
+                                                 selected["state"].upper(),
+                                                 selected["zip"].title())
+
+            return [SlotSet("facility_address", address)]
+        else:
+            print("No address found. Most likely this action was executed "
+                  "before the user choose a healthcare facility from the "
+                  "provided list. "
+                  "If this is a common problem in your dialogue flow,"
+                  "using a form instead for this action might be appropriate.")
+
+            return [SlotSet("facility_address", "not found")]
 
 
 class FacilityForm(FormAction):
@@ -123,7 +198,6 @@ class FacilityForm(FormAction):
 
         location = tracker.get_slot('location')
         facility_type = tracker.get_slot('facility_type')
-        "Finding a hospital near you..."
 
         results = _find_facilities(location, facility_type)
         button_name = _resolve_name(FACILITY_TYPES, facility_type)
