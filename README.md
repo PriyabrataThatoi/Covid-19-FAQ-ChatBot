@@ -1,6 +1,6 @@
 # SARATHI : A Covid 19 FAQ ChatBot & Medical Facilitator
 
-SARATHI is a RASA NLU powered chatbot that takes user inputs and responses in return. The chatbot uses the SpaCy language model to matches the user input with the intent repository. It also call s API to look up medical facilities based on the location and medical facility type provided
+SARATHI is a RASA NLU powered chatbot that takes user inputs and responses in return. The chatbot uses the SpaCy language model to matches the user input with the intent repository. It also call s API (https://data.medicare.gov/resource/{}.json) to look up medical facilities based on the location and medical facility type provided
 
 
 ![Rasa NLU](https://user-images.githubusercontent.com/54467567/87466478-ec3aaf00-c5db-11ea-976e-160d700afb17.png)
